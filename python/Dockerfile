@@ -1,10 +1,8 @@
-FROM python:3.10-alpine
+FROM python:slim-bullseye
 
 WORKDIR /app
 
-COPY requirements.txt requirements.txt
-
-RUN apk add --no-cache musl-dev g++ gcc lapack-dev
+COPY requirementcs.txt requirements.txt
 
 RUN pip3 install -r requirements.txt
 
